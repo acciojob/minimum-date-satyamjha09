@@ -1,8 +1,10 @@
 function minDate(dates) {
-  //write you code here
+	return new Date(
+    Math.min(...dates.map(date => new Date(date)))
+  ).toISOString().split("T")[0];
+  
 }
 
-// Do not change the code
 
 var dates = [
   "2023/03/01",
